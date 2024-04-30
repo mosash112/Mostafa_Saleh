@@ -11,7 +11,7 @@ async function getProps(): Promise<ProjectType[]> {
 }
 
 async function Mern() {
-    // const projects = await getProps();
+    const projects = await getProps();
     return (
         <div className="flex flex-col flex-1 m-8 lg:h-fit h-full">
             <h1 className="pb-3 font-bold text-2xl">MERN Projects</h1>
