@@ -1,7 +1,24 @@
-import { Navbar } from "@/components/Navbar";
+import { Project, ProjectType } from "@/components/Project";
 
-export default function about() {
+async function getProps(): Promise<ProjectType[]> {
+    const response = await fetch('http://localhost:3000/projects.json');
+    const projects: ProjectType[] = await response.json();
+    const filteredProjects = projects.filter(project => project.category === 'mern');
+
+    return filteredProjects;
+}
+
+async function Mern() {
+    const projects = await getProps();
     return (
-        <h1>MERN Work Page</h1>
+        <div className="flex flex-col flex-1 m-8 lg:h-fit h-full">
+            <h1 className="pb-3 font-bold text-2xl">MERN Projects</h1>
+            <p className="pb-3">Profissional website built using React js (vite js, next js) and node js.</p>
+            {projects?.map((project: ProjectType, index: number) => (
+                <Project key={index} {...project} />
+            ))}
+        </div>
     );
 }
+
+export default Mern;

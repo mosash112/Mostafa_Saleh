@@ -1,3 +1,3 @@
-export default function AboutLayout({ children, }: { children: React.ReactNode }) {
-    return <section className="flex justify-center items-center h-full">{children}</section>
+export default function BackEndLayout({ children, }: { children: React.ReactNode }) {
+    return <section className="flex justify-center items-start h-full">{children}</section>
 }
