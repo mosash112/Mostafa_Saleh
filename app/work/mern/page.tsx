@@ -4,8 +4,6 @@ async function getProps(): Promise<ProjectType[]> {
     const response = await fetch(process.env.BASE_URL + '/projects.json');
     const projects: ProjectType[] = await response.json();
     const filteredProjects = projects.filter(project => project.category === 'mern');
-    console.log(response);
-    console.log(projects);
 
     return filteredProjects;
 }
