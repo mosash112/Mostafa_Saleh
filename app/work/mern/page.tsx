@@ -1,7 +1,7 @@
 import { Project, ProjectType } from "@/components/Project";
 
 async function getProps(): Promise<ProjectType[]> {
-    const response = await fetch('http://localhost:3000/projects.json');
+    const response = await fetch(process.env.BASE_URL + '/projects.json');
     const projects: ProjectType[] = await response.json();
     const filteredProjects = projects.filter(project => project.category === 'mern');
 
