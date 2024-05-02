@@ -38,14 +38,6 @@
     ]
   },
   {
-    "category": "next",
-    "name": "Transaction page",
-    "description": "A Next Js front-end page that shows a donation transaction",
-    "link": "",
-    "github": "https://github.com/mosash112/Full-Stack-Transaction-page-V1",
-    "images": []
-  },
-  {
     "category": "nodejs",
     "name": "My Store api",
     "description": "A Node.js e-commerce api",
