@@ -53,13 +53,13 @@ export function Project({ name, description, link, github, images }: ProjectType
     }, [api])
 
     return (
-        <Card className="project mb-5">
+        <Card className="project mb-5 m-3 bg-gradient-to-tl from-secondary/30 to-card">
             <CardHeader>
-                <CardTitle>{name}</CardTitle>
-                <CardDescription>{description}</CardDescription>
+                <CardTitle className="">{name}</CardTitle>
+                <CardDescription className="text-card-forground">{description}</CardDescription>
             </CardHeader>
             <CardContent className="w-full flex px-5">
-                <div className="flex-1">
+                {images.length > 0 ? <div className="flex-1">
                     <Carousel
                         setApi={setApi}
                         plugins={[plugin.current]}
@@ -74,17 +74,17 @@ export function Project({ name, description, link, github, images }: ProjectType
                         <CarouselContent className="-ml-2">
                             {images?.map((_, index) => (
                                 <CarouselItem key={index} className="md:basis-1/2 sm:basis-1 pl-2 ">
-                                    <img src={images[index]} alt="project images" />
+                                    <img src={images[index]} alt="project images" className="rounded-lg" />
                                 </CarouselItem>
                             ))}
                         </CarouselContent>
-                        <CarouselPrevious />
-                        <CarouselNext />
+                        <CarouselPrevious className="bg-transparent border-none" />
+                        <CarouselNext className="bg-transparent border-none" />
                     </Carousel>
-                    <div className="py-2 text-center text-sm text-muted-foreground">
+                    <div className="py-2 text-center text-sm text-card-foreground">
                         Slide {current} of {count}
                     </div>
-                </div>
+                </div> : null}
             </CardContent>
             <CardFooter className="flex flex-row gap-10">
                 <a href={link} target="_blank" rel="noopener noreferrer">View Project</a>

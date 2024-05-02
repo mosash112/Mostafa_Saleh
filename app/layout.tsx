@@ -14,9 +14,8 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main className="h-screen">
+        <main className="h-screen bg-background">
           <Navbar />
-          
           {children}
         </main>
       </body>

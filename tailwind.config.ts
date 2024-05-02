@@ -22,15 +22,15 @@ const config = {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+        background: "#222831",
+        foreground: "#EEEEEE",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "#222831",
+          foreground: "#EEEEEE",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: "#393E46",
+          foreground: "#EEEEEE",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -41,17 +41,21 @@ const config = {
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
+          DEFAULT: "#00575b",
+          foreground: "#EEEEEE",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
         },
         card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
+          DEFAULT: "#EEEEEE",
+          foreground: "#222831",
         },
+        navbar: {
+          DEFAULT: "#00adb5",
+          foreground: "#EEEEEE",
+        }
       },
       borderRadius: {
         lg: "var(--radius)",
