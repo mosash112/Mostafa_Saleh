@@ -54,15 +54,15 @@ export function Navbar() {
                                 </li>
                                 <li className="row-span-3">
                                     <ListItem href="/work/frontend" title="Front-end" className="mb-2">
-                                        Re-usable frontend built using react js with bootstrap, Tailwind CSS.
+                                        Re-usable frontend built using React, Vite and NextJs.
                                     </ListItem>
                                     <ListItem href="/work/backend" title="Back-end">
                                         Backend apis built using nodeJs and .Net.
                                     </ListItem>
                                 </li>
                                 <li className="row-span-3">
-                                    <ListItem href="/work/backend" title="Flutter">
-                                        Backend apis built using node js with express js, SQL and no-SQL databases.
+                                    <ListItem href="/work/backend" title="">
+                                        Work in progress...
                                     </ListItem>
                                 </li>
                             </ul>
