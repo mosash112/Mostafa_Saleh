@@ -13,6 +13,7 @@ import {
     NavigationMenuTrigger,
     navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
+import * as font from '@next/font/google';
 
 export function Navbar() {
     return (
@@ -22,19 +23,12 @@ export function Navbar() {
                     <NavigationMenuItem>
                         <Link href="/" legacyBehavior passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                Home
+                                <h1 className="font-sans text-xl">Mostafa A. Saleh</h1>
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                        <Link href="/about" legacyBehavior passHref>
-                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                About me
-                            </NavigationMenuLink>
-                        </Link>
-                    </NavigationMenuItem>
-                    <NavigationMenuItem>
-                        <NavigationMenuTrigger>My work</NavigationMenuTrigger>
+                        <NavigationMenuTrigger>My Portfolio</NavigationMenuTrigger>
                         <NavigationMenuContent>
                             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[800px] lg:grid-cols-[1fr_1fr_1fr] bg-secondary">
                                 <li className="row-span-3">
@@ -70,7 +64,7 @@ export function Navbar() {
                     </NavigationMenuItem>
                     <NavigationMenuItem>
                         <Link href="/contact" legacyBehavior passHref>
-                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                                 Contact me
                             </NavigationMenuLink>
                         </Link>
