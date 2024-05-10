@@ -91,6 +91,12 @@ export function Navbar() {
                         <FontAwesomeIcon icon={faBars} />
                     </DropdownMenuTrigger>
                     <DropdownMenuContent>
+                        <DropdownMenuItem>
+                            <Link href="/" legacyBehavior passHref>
+                                Home
+                            </Link>
+                        </DropdownMenuItem>
+                        <DropdownMenuSeparator className="bg-primary" />
                         <DropdownMenuLabel>My Portfolio</DropdownMenuLabel>
                         <DropdownMenuSeparator />
                         <DropdownMenuItem>
