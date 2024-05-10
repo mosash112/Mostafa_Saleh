@@ -14,19 +14,29 @@ import {
     navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import ListItem from "./ListItem"
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 export function Navbar() {
     return (
-        <div className="w-full bg-navbar">
+        <div className="w-full bg-navbar ">
             <NavigationMenu className="ml-4 lg:ml-12">
-                <NavigationMenuList>
-                    <NavigationMenuItem>
-                        <Link href="/" legacyBehavior passHref>
-                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                <h1 className="text-xl">Mostafa A. Saleh</h1>
-                            </NavigationMenuLink>
-                        </Link>
-                    </NavigationMenuItem>
+                <NavigationMenuItem className="list-none">
+                    <Link href="/" legacyBehavior passHref>
+                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                            <h1 className="text-xl">Mostafa A. Saleh</h1>
+                        </NavigationMenuLink>
+                    </Link>
+                </NavigationMenuItem>
+                <NavigationMenuList className="hidden md:flex">
                     <NavigationMenuItem>
                         <NavigationMenuTrigger>My Portfolio</NavigationMenuTrigger>
                         <NavigationMenuContent>
@@ -75,6 +85,38 @@ export function Navbar() {
                     </NavigationMenuItem>
                 </NavigationMenuList>
             </NavigationMenu>
+            <div className="md:hidden absolute right-3 top-2">
+                <DropdownMenu>
+                    <DropdownMenuTrigger>
+                        <FontAwesomeIcon icon={faBars} />
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent>
+                        <DropdownMenuLabel>My Portfolio</DropdownMenuLabel>
+                        <DropdownMenuSeparator />
+                        <DropdownMenuItem>
+                            <Link href="/work/mern">
+                                MERN
+                            </Link>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem>
+                            <Link href="/work/frontend">
+                                Front-end
+                            </Link>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem>
+                            <Link href="/work/backend">
+                                Back-end
+                            </Link>
+                        </DropdownMenuItem>
+                        <DropdownMenuSeparator className="bg-primary" />
+                        <DropdownMenuItem>
+                            <Link href="/contact" legacyBehavior passHref>
+                                Contact me
+                            </Link>
+                        </DropdownMenuItem>
+                    </DropdownMenuContent>
+                </DropdownMenu>
+            </div>
         </div>
     )
 }
