@@ -20,8 +20,22 @@ export default function Home() {
           from requirements analysis and design to implementation, testing, and deployment. Passionate about learning new technologies and tools to
           improve efficiency and productivity. </p>
         <div className="flex">
-          <Button variant={"outline"} className="mr-12 px-6 text-md bg-navbar text-primary border-primary hover:border-navbar hover:bg-primary hover:text-navbar">Hire Me</Button>
-          <Button variant={"outline"} className="px-6 text-md bg-primary text-navbar border-navbar hover:border-primary hover:bg-navbar hover:text-primary">{"Let\'s Talk"}</Button>
+          <Link
+            href="/">
+            <Button
+              variant={"outline"}
+              className="mr-12 px-6 text-md bg-navbar text-primary border-primary hover:border-navbar hover:bg-primary hover:text-navbar">
+              Hire Me
+            </Button>
+          </Link>
+          <Link
+            href="/contact">
+            <Button
+              variant={"outline"}
+              className="px-6 text-md bg-primary text-navbar border-navbar hover:border-primary hover:bg-navbar hover:text-primary">
+              {"Let\'s Talk"}
+            </Button>
+          </Link>
         </div>
         <div className="flex absolute bottom-3">
           <Link
