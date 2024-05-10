@@ -18,7 +18,7 @@ import ListItem from "./ListItem"
 export function Navbar() {
     return (
         <div className="w-full bg-navbar">
-            <NavigationMenu className="ml-12">
+            <NavigationMenu className="ml-4 lg:ml-12">
                 <NavigationMenuList>
                     <NavigationMenuItem>
                         <Link href="/" legacyBehavior passHref>

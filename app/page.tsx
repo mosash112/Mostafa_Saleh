@@ -12,8 +12,8 @@ export default function Home() {
   };
 
   return (
-    <div className="mx-12 flex h-full">
-      <div className="flex flex-col flex-1 justify-center">
+    <div className="mx-4 lg:mx-12 flex flex-col h-full lg:flex-row">
+      <div className="flex flex-col flex-1 justify-center my-5">
         <h1 className="text-5xl font-bold mb-2">{"Hi, I\'m Mostafa Saleh"}</h1>
         <TitleRotator />
         <p className="text-sm mt-4 mb-8">Dedicated full stack developer with experience in developing high-quality applications and solutions. Adept at all phases of the development lifecycle
@@ -37,7 +37,7 @@ export default function Home() {
             </Button>
           </Link>
         </div>
-        <div className="flex absolute bottom-3">
+        <div className="hidden lg:flex absolute bottom-3">
           <Link
             href="https://github.com/mosash112">
             <Button
