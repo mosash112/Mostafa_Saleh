@@ -20,7 +20,7 @@ async function Backend() {
     const nodeJsProjects = await getnodejs();
     const detNetProjects = await getdotnet();
     return (
-        <div className="flex flex-col flex-1 m-12 lg:h-fit h-full">
+        <div className="flex flex-col flex-1 m-4 lg:m-12 lg:h-fit h-full">
             <h1 className="pb-3 font-bold text-2xl">Back End Projects</h1>
             <div className="border rounded-lg mb-3">
                 <h2 className="m-3 font-semibold text-lg">Node JS</h2>
