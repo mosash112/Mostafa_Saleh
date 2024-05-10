@@ -11,10 +11,12 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
+
+
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main className="h-screen w-full bg-background">
+        <main className="h-dvh w-full bg-background">
           <Navbar />
           {children}
         </main>

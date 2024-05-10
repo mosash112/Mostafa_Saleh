@@ -20,7 +20,7 @@ async function Frontend() {
     const reactProjects = await getReact();
     const nextProjects = await getNext();
     return (
-        <div className="flex flex-col flex-1 m-8 lg:h-fit h-full">
+        <div className="flex flex-col flex-1 m-12 lg:h-fit h-full">
             <h1 className="pb-3 font-bold text-2xl">Front End Projects</h1>
             <div className="border rounded-lg mb-3">
                 <h2 className="m-3 font-semibold text-lg">React</h2>
