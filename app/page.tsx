@@ -16,9 +16,8 @@ export default function Home() {
       <div className="flex flex-col flex-1 justify-center my-5">
         <h1 className="text-5xl font-bold mb-2">{"Hi, I\'m Mostafa Saleh"}</h1>
         <TitleRotator />
-        <p className="text-sm mt-4 mb-8">Dedicated full stack developer with experience in developing high-quality applications and solutions. Adept at all phases of the development lifecycle
-          from requirements analysis and design to implementation, testing, and deployment. Passionate about learning new technologies and tools to
-          improve efficiency and productivity. </p>
+        <p className="text-sm mt-4 mb-8">Dedicated junior software engineer with experience in developing high-quality applications and solutions. Adept at all phases of the development lifecycle
+          from requirements analysis and design to implementation, testing, and deployment. Passionate about learning new technologies and tools to improve efficiency and productivity. </p>
         <div className="flex">
           <Link
             href="/">
@@ -45,7 +44,7 @@ export default function Home() {
               className="mr-8 p-2 border-navbar rounded-full text-navbar hover:border-primary hover:bg-navbar hover:text-primary">
               <FontAwesomeIcon
                 icon={faGithub}
-                className="w-6"
+                className="w-5"
               />
             </Button>
           </Link>
