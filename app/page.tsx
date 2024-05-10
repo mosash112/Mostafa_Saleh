@@ -37,7 +37,7 @@ export default function Home() {
             </Button>
           </Link>
         </div>
-        <div className="hidden lg:flex absolute bottom-3">
+        <div className="hidden md:flex absolute bottom-3">
           <Link
             href="https://github.com/mosash112">
             <Button
