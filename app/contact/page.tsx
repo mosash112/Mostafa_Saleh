@@ -1,7 +1,9 @@
 import SendEmailForm from "@/components/forms/sendEmailForm";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+
 
 export default function contact() {
+
     return (
         <div className="flex flex-col md:flex-row m-4 p-4 lg:m-12 w-10/12 items-center justify-evenly gap-10">
             <div className="flex-1 w-full">

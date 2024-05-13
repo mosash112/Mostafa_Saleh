@@ -15,10 +15,20 @@ import {
     FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-import { useToast } from "@/components/ui/use-toast"
-import { useState } from "react"
 import { Textarea } from "@/components/ui/textarea"
 import sendEmail from "@/app/api/mail"
+import {
+    Dialog,
+    DialogClose,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog"
+import { useRef } from "react"
+
 
 export type FormDataType = {
     name: string;
@@ -49,9 +59,6 @@ const formSchema = z.object({
 
 
 function SendEmailForm() {
-    const { toast } = useToast()
-    const [isLoading, setIsLoading] = useState(false);
-    const [successMessage, setSuccessMessage] = useState('');
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -62,7 +69,7 @@ function SendEmailForm() {
         },
     })
 
-    function onSubmit(data: z.infer<typeof formSchema>) {
+    const onSubmit = (data: z.infer<typeof formSchema>) => {
         sendEmail(data.name, data.email, data.subject, data.content);
     }
 
@@ -139,7 +146,26 @@ function SendEmailForm() {
                             </FormItem>
                         )}
                     />
-                    <Button type="submit">Submit</Button>
+                    <Dialog >
+                        <DialogTrigger asChild>
+                            <Button type="submit">Submit</Button>
+                        </DialogTrigger>
+                        <DialogContent className="bg-foreground">
+                            <DialogHeader>
+                                <DialogTitle className="text-primary">Thank you for sending an email</DialogTitle>
+                                <DialogDescription className="text-secondary">
+                                    Now the email that youjust sent will find me shortly and you will hear from me soon.
+                                </DialogDescription>
+                            </DialogHeader>
+                            <DialogFooter className="sm:justify-start">
+                                <DialogClose asChild>
+                                    <Button type="button" variant="destructive">
+                                        Close
+                                    </Button>
+                                </DialogClose>
+                            </DialogFooter>
+                        </DialogContent>
+                    </Dialog>
                 </form>
             </Form>
         </div>
