@@ -154,7 +154,7 @@ function SendEmailForm() {
                             <DialogHeader>
                                 <DialogTitle className="text-primary">Thank you for sending an email</DialogTitle>
                                 <DialogDescription className="text-secondary">
-                                    Now the email that youjust sent will find me shortly and you will hear from me soon.
+                                    Now the email that you just sent will find me shortly and you will hear from me soon.
                                 </DialogDescription>
                             </DialogHeader>
                             <DialogFooter className="sm:justify-start">
