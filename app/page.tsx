@@ -18,15 +18,16 @@ export default function Home() {
         <TitleRotator />
         <p className="text-sm mt-4 mb-8">Dedicated junior software engineer with experience in developing high-quality applications and solutions. Adept at all phases of the development lifecycle
           from requirements analysis and design to implementation, testing, and deployment. Passionate about learning new technologies and tools to improve efficiency and productivity. </p>
+        <p className="mb-2">Want to hire me?</p>
         <div className="flex">
-          <Link
-            href="/">
+          <a
+            href={process.env.BASE_URL + "/Mostafa_Ahmed_Saleh.pdf"} download="Mostafa_Ahmed_Saleh.pdf">
             <Button
               variant={"outline"}
               className="mr-12 px-6 text-md bg-navbar text-primary border-primary hover:border-navbar hover:bg-primary hover:text-navbar">
-              Hire Me
+              Here is my resume
             </Button>
-          </Link>
+          </a>
           <Link
             href="/contact">
             <Button
