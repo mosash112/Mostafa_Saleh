@@ -1,13 +1,13 @@
 import type { Config } from "tailwindcss"
 
 const config = {
-  darkMode: ["class"],
+  darkMode: ["selector"],
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
@@ -22,33 +22,34 @@ const config = {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        // background: "#000434",
-        background: "#222831",
-        foreground: "#EEEEEE",
+        background: "var(--background)",
+        foreground: "var(--foreground)",
         primary: {
-          DEFAULT: "#222831",
-          foreground: "#EEEEEE",
+          DEFAULT: "var(--primary)",
+          foreground: "var(--primary-foreground)",
         },
         secondary: {
-          DEFAULT: "#393E46",
-          foreground: "#EEEEEE",
-        },     
+          DEFAULT: "var(--secondary)",
+          foreground: "var(--secondary-foreground)",
+        },
         accent: {
-          DEFAULT: "#00575b",
-          foreground: "#EEEEEE",
+          DEFAULT: "var(--accent)",
+          foreground: "var(--accent-foreground)",
+        },
+        muted: {
+          DEFAULT: "var(--muted)",
+          foreground: "var(--muted-foreground)",
         },
         card: {
-          DEFAULT: "#EEEEEE",
-          foreground: "#222831",
+          DEFAULT: "var(--card)",
+          foreground: "var(--card-foreground)",
         },
         navbar: {
-          // DEFAULT: "#ff9300",
-          DEFAULT: "#00ADB5",
-          // foreground: "#000434",
-          foreground: "#EEEEEE",
+          DEFAULT: "var(--navbar)",
+          foreground: "var(--navbar-foreground)",
         },
-        trans:{
-          DEFAULT: "#ffffff00"
+        trans: {
+          DEFAULT: "var(--trans)",
         }
       },
       borderRadius: {

@@ -19,7 +19,7 @@ function TitleRotator() {
             <CarouselContent>
                 {titles?.map((_, index) => (
                     <CarouselItem key={index}>
-                        <h2 className="text-2xl font-bold text-navbar">{titles[index]}</h2>
+                        <h2 className="text-2xl font-bold text-primary">{titles[index]}</h2>
                     </CarouselItem>
                 ))}
             </CarouselContent>

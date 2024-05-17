@@ -117,7 +117,7 @@ const FormControl = React.forwardRef<
           : `${formDescriptionId} ${formMessageId}`
       }
       aria-invalid={!!error}
-      className="border-secondary border-2 bg-foreground"
+      className="border-secondary border-2 bg-background"
       {...props}
     />
   )

@@ -53,10 +53,10 @@ export function Project({ name, description, link, github, images }: ProjectType
     }, [api])
 
     return (
-        <Card className="project mb-5 m-3 bg-gradient-to-tl from-secondary/30 to-card">
+        <Card className="project mb-5 m-3 border-none bg-gradient-to-l from-background to-muted">
             <CardHeader>
                 <CardTitle className="">{name}</CardTitle>
-                <CardDescription className="text-card-forground">{description}</CardDescription>
+                <CardDescription className="text-forground">{description}</CardDescription>
             </CardHeader>
             <CardContent className="w-full flex px-5">
                 {images.length > 0 ? <div className="flex-1">
@@ -78,10 +78,10 @@ export function Project({ name, description, link, github, images }: ProjectType
                                 </CarouselItem>
                             ))}
                         </CarouselContent>
-                        <CarouselPrevious className="bg-transparent border-none" />
-                        <CarouselNext className="bg-transparent border-none" />
+                        <CarouselPrevious className="bg-trans border-none" />
+                        <CarouselNext className="bg-trans border-none" />
                     </Carousel>
-                    <div className="py-2 text-center text-sm text-card-foreground">
+                    <div className="py-2 text-center text-sm text-foreground">
                         Slide {current} of {count}
                     </div>
                 </div> : null}

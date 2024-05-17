@@ -16,12 +16,12 @@ function ListItem({ className, title, description, href }: Props) {
                 <Link
                     href={href}
                     className={cn(
-                        "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors bg-gradient-to-br from-foreground/70 to-navbar hover:bg-navbar hover:text-primary focus:bg-navbar focus:text-primary",
+                        "block select-none space-y-1 p-3 leading-none no-underline outline-none transition-colors bg-trans text-accent border-2 border-navbar rounded-md hover:bg-primary hover:text-background hover:border-trans",
                         className!
                     )}
                 >
-                    <div className="text-sm font-medium leading-none">{title}</div>
-                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                    <div className="text-sm font-bold leading-none">{title}</div>
+                    <p className="line-clamp-2 text-sm leading-snug">
                         {description}
                     </p>
                 </Link>
