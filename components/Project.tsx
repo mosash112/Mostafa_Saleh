@@ -74,7 +74,7 @@ export function Project({ name, description, link, github, images }: ProjectType
                         <CarouselContent className="-ml-2">
                             {images?.map((_, index) => (
                                 <CarouselItem key={index} className="md:basis-1/2 sm:basis-1 pl-2 ">
-                                    <img src={images[index]} alt="project images" className="rounded-lg" />
+                                    <img src={process.env.BASE_URL+images[index]} alt="project images" className="rounded-lg" />
                                 </CarouselItem>
                             ))}
                         </CarouselContent>
