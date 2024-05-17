@@ -10,12 +10,12 @@ export default function Home() {
     return (
     <div className="mx-4 lg:mx-12 flex flex-col h-full lg:flex-row">
       <div className="flex flex-col flex-1 justify-center my-5">
-        <h1 className="text-5xl font-bold mb-2">{"Hi, I\'m Mostafa Saleh"}</h1>
+        <h1 className="text-5xl font-bold mb-2 animate-fade-down">{"Hi, I\'m Mostafa Saleh"}</h1>
         <TitleRotator />
-        <p className="text-sm mt-4 mb-8 font-semibold">Dedicated junior software engineer with experience in developing high-quality applications and solutions. Adept at all phases of the development lifecycle
+        <p className="text-sm mt-4 mb-8 font-semibold animate-fade-up">Dedicated junior software engineer with experience in developing high-quality applications and solutions. Adept at all phases of the development lifecycle
           from requirements analysis and design to implementation, testing, and deployment. Passionate about learning new technologies and tools to improve efficiency and productivity. </p>
-        <p className="mb-2 font-bold">Want to hire me?</p>
-        <div className="flex flex-col md:flex-row">
+        <p className="mb-2 font-bold animate-fade-up">Want to hire me?</p>
+        <div className="flex flex-col md:flex-row animate-fade-up">
           <a
             href={process.env.BASE_URL + "/Mostafa_Ahmed_Saleh.pdf"} download="Mostafa_Ahmed_Saleh.pdf">
             <Button
@@ -69,7 +69,7 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      <div className="flex flex-col flex-1 justify-center">
+      <div className="flex flex-col flex-1 justify-center animate-fade-left">
         <img src={process.env.BASE_URL + "/imgs/home-3.png"} alt="my image" />
       </div>
     </div>

@@ -58,6 +58,36 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        "fadeInLeft": {
+          from: {
+            transform: 'translateX(20px)',
+            opacity: '0',
+          },
+          to: {
+            transform: 'translateX(0)',
+            opacity: '1',
+          }
+        },
+        "fadeInDown": {
+          from: {
+            transform: 'translateY(-20px)',
+            opacity: '0',
+          },
+          to: {
+            transform: 'translateY(0)',
+            opacity: '1',
+          }
+        },
+        "fadeInUp": {
+          from: {
+            transform: 'translateY(20px)',
+            opacity: '0',
+          },
+          to: {
+            transform: 'translateY(0)',
+            opacity: '1',
+          }
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -68,6 +98,9 @@ const config = {
         },
       },
       animation: {
+        'fade-down': 'fadeInDown 0.8s ease-in-out',
+        'fade-up': 'fadeInUp 0.8s ease-in-out',
+        'fade-left': 'fadeInLeft 0.8s ease-in-out',
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },

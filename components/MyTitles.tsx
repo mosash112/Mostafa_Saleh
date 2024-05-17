@@ -15,7 +15,7 @@ function TitleRotator() {
         Autoplay({ delay: 3000 })
     )
     return (
-        <Carousel plugins={[plugin.current]} opts={{ align: 'start', loop: true, }} className="mb-2">
+        <Carousel plugins={[plugin.current]} opts={{ align: 'start', loop: true, }} className="mb-2 animate-fade-down">
             <CarouselContent>
                 {titles?.map((_, index) => (
                     <CarouselItem key={index}>
