@@ -19,12 +19,12 @@ export default function Home() {
         <p className="text-sm mt-4 mb-8">Dedicated junior software engineer with experience in developing high-quality applications and solutions. Adept at all phases of the development lifecycle
           from requirements analysis and design to implementation, testing, and deployment. Passionate about learning new technologies and tools to improve efficiency and productivity. </p>
         <p className="mb-2">Want to hire me?</p>
-        <div className="flex">
+        <div className="flex flex-col md:flex-row">
           <a
             href={process.env.BASE_URL + "/Mostafa_Ahmed_Saleh.pdf"} download="Mostafa_Ahmed_Saleh.pdf">
             <Button
               variant={"outline"}
-              className="mr-12 px-6 text-md bg-navbar text-primary border-primary hover:border-navbar hover:bg-primary hover:text-navbar">
+              className="mb-4 md:mr-12 px-6 text-md font-bold bg-navbar text-primary border-primary hover:border-navbar hover:bg-trans hover:text-navbar">
               Here is my resume
             </Button>
           </a>
@@ -32,7 +32,7 @@ export default function Home() {
             href="/contact">
             <Button
               variant={"outline"}
-              className="px-6 text-md bg-primary text-navbar border-navbar hover:border-primary hover:bg-navbar hover:text-primary">
+              className="px-6 text-md bg-trans text-navbar font-bold border-navbar hover:border-primary hover:bg-navbar hover:text-primary">
               {"Let\'s Talk"}
             </Button>
           </Link>
@@ -74,7 +74,7 @@ export default function Home() {
         </div>
       </div>
       <div className="flex flex-col flex-1 justify-center">
-        <img src={process.env.BASE_URL + "/imgs/home-1.png"} alt="" />
+        <img src={process.env.BASE_URL + "/imgs/home-1.png"} alt="my image" />
       </div>
     </div>
   );

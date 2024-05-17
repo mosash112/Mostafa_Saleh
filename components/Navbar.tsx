@@ -23,28 +23,29 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faMoon } from '@fortawesome/free-solid-svg-icons';
+import { Button } from "./ui/button"
 
 export function Navbar() {
     return (
         <div className="w-full bg-navbar ">
-            <NavigationMenu className="ml-4 lg:ml-12">
+            <NavigationMenu className="lg:ml-12 ">
                 <NavigationMenuItem className="list-none">
                     <Link href="/" legacyBehavior passHref>
                         <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                            <h1 className="text-xl">Mostafa A. Saleh</h1>
+                            <h1 className="text-xl font-bold">Mostafa A. Saleh</h1>
                         </NavigationMenuLink>
                     </Link>
                 </NavigationMenuItem>
                 <NavigationMenuList className="hidden md:flex">
                     <NavigationMenuItem>
-                        <NavigationMenuTrigger>My Portfolio</NavigationMenuTrigger>
+                        <NavigationMenuTrigger className="font-bold">My Portfolio</NavigationMenuTrigger>
                         <NavigationMenuContent>
-                            <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[800px] lg:grid-cols-[1fr_1fr_1fr] bg-secondary">
+                            <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[800px] lg:grid-cols-[1fr_1fr_1fr] bg-background">
                                 <li className="row-span-3">
                                     <NavigationMenuLink asChild>
                                         <Link
-                                            className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-foreground/70 to-foreground p-6 no-underline outline-none focus:shadow-md hover:bg-navbar hover:text-primary focus:bg-navbar focus:text-primary"
+                                            className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-br from-foreground/70 to-navbar p-6 no-underline outline-none focus:shadow-md hover:bg-navbar hover:text-primary focus:bg-navbar focus:text-primary"
                                             href="/work/mern"
                                         >
                                             <div className="mb-2 mt-4 text-lg font-medium">
@@ -79,7 +80,7 @@ export function Navbar() {
                     <NavigationMenuItem>
                         <Link href="/contact" legacyBehavior passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                Contact me
+                                <span className="font-bold">Contact me</span>
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
@@ -123,6 +124,9 @@ export function Navbar() {
                     </DropdownMenuContent>
                 </DropdownMenu>
             </div>
+            <Button className="absolute md:right-3 top-0 p-2 bg-trans text-navbar-foreground hover:bg-accent">
+                <FontAwesomeIcon icon={faMoon} size="xl"/>
+            </Button>
         </div>
     )
 }
