@@ -68,9 +68,7 @@ export default function Home() {
         </div>
       </div>
       <div className="flex flex-col flex-1 justify-center animate-fade-left">
-        {typeof window !== 'undefined' && localStorage.getItem('theme') === 'dark'
-          ? <img src={process.env.BASE_URL + "/imgs/home-3-dark.png"} alt="my image" />
-          : <img src={process.env.BASE_URL + "/imgs/home-3-light.png"} alt="my image" />}
+        <img src={process.env.BASE_URL + "/imgs/home-3.png"} alt="my image" />
       </div>
     </div>
   );
