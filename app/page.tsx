@@ -1,5 +1,3 @@
-// import Image from "next/image";
-
 import TitleRotator from "@/components/MyTitles";
 import { Button } from "@/components/ui/button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,7 +5,7 @@ import { faFacebookF, faGithub, faLinkedinIn } from '@fortawesome/free-brands-sv
 import Link from "next/link";
 
 export default function Home() {
-    return (
+  return (
     <div className="mx-4 lg:mx-12 flex flex-col h-full lg:flex-row">
       <div className="flex flex-col flex-1 justify-center my-5">
         <h1 className="text-5xl font-bold mb-2 animate-fade-down">{"Hi, I\'m Mostafa Saleh"}</h1>
@@ -70,7 +68,9 @@ export default function Home() {
         </div>
       </div>
       <div className="flex flex-col flex-1 justify-center animate-fade-left">
-        <img src={process.env.BASE_URL + "/imgs/home-3.png"} alt="my image" />
+        {typeof window !== 'undefined' && localStorage.getItem('theme') === 'dark'
+          ? <img src={process.env.BASE_URL + "/imgs/home-3-dark.png"} alt="my image" />
+          : <img src={process.env.BASE_URL + "/imgs/home-3-light.png"} alt="my image" />}
       </div>
     </div>
   );
