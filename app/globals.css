@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: #89cff0;
+    --background: #EEEEEE;
     --foreground: #222831;
 
     /* --card: #EEEEEE;
@@ -13,8 +13,8 @@
     /* --navbar: #00ADB5;
     --navbar-foreground: #EEEEEE; */
 
-    --primary: #EEEEEE;
-    --primary-foreground: #89cff0;
+    --primary: #89cff0;
+    --primary-foreground: #EEEEEE;
 
     --secondary: #393E46;
     --secondary-foreground: #EEEEEE;
