@@ -6,10 +6,10 @@
     "link": "https://my-booking-app-6z8n.onrender.com/",
     "github": "https://github.com/mosash112/Booking-app",
     "images": [
-      "imgs/mern/booking1.png",
-      "imgs/mern/booking2.png",
-      "imgs/mern/booking3.png",
-      "imgs/mern/booking4.png"
+      "/imgs/mern/booking1.png",
+      "/imgs/mern/booking2.png",
+      "/imgs/mern/booking3.png",
+      "/imgs/mern/booking4.png"
     ]
   },
   {
@@ -19,9 +19,9 @@
     "link": "https://supervision-test.onrender.com",
     "github": "",
     "images": [
-      "imgs/mern/supervision1.png",
-      "imgs/mern/supervision2.png",
-      "imgs/mern/supervision3.png"
+      "/imgs/mern/supervision1.png",
+      "/imgs/mern/supervision2.png",
+      "/imgs/mern/supervision3.png"
     ]
   },
   {
@@ -31,10 +31,10 @@
     "link": "https://my-ecommerce-xn89.onrender.com",
     "github": "https://github.com/mosash112/E-Commerance.git",
     "images": [
-      "imgs/frontend/e-commerce1.png",
-      "imgs/frontend/e-commerce2.png",
-      "imgs/frontend/e-commerce3.png",
-      "imgs/frontend/e-commerce4.png"
+      "/imgs/frontend/e-commerce1.png",
+      "/imgs/frontend/e-commerce2.png",
+      "/imgs/frontend/e-commerce3.png",
+      "/imgs/frontend/e-commerce4.png"
     ]
   },
   {
@@ -60,9 +60,9 @@
     "link": "https://play.google.com/store/apps/details?id=com.mostafasaleh.karateka",
     "github": "",
     "images": [
-      "imgs/flutter/karateka1.jpg",
-      "imgs/flutter/karateka2.jpg",
-      "imgs/flutter/karateka3.jpg"
+      "/imgs/flutter/karateka1.jpg",
+      "/imgs/flutter/karateka2.jpg",
+      "/imgs/flutter/karateka3.jpg"
     ]
   }
 ]
