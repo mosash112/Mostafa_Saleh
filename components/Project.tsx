@@ -20,6 +20,7 @@ import * as React from "react"
 import Autoplay from "embla-carousel-autoplay"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import Image from "next/image"
 
 
 export type ProjectType = {
@@ -74,7 +75,7 @@ export function Project({ name, description, link, github, images }: ProjectType
                         <CarouselContent className="-ml-2">
                             {images?.map((_, index) => (
                                 <CarouselItem key={index} className="md:basis-1/2 sm:basis-1 pl-2 ">
-                                    <img src={process.env.BASE_URL+images[index]} alt="project images" className="rounded-lg" />
+                                    <Image src={process.env.BASE_URL+images[index]} alt="project images" className="rounded-lg" width={200} height={200} />
                                 </CarouselItem>
                             ))}
                         </CarouselContent>
