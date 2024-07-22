@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF, faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -69,7 +68,7 @@ export default function Home() {
         </div>
       </div>
       <div className="flex flex-col flex-1 justify-center animate-fade-left">
-        <Image src={process.env.BASE_URL + "/imgs/home-3.png"} alt="my image" />
+        <img src={process.env.BASE_URL + "/imgs/home-3.png"} alt="my image" />
       </div>
     </div>
   );
