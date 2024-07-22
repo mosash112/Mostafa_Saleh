@@ -55,10 +55,14 @@
   },
   {
     "category": "flutter",
-    "name": "NamerApp",
-    "description": "A ﬂutter desktop app that suggest funny usernames for your accounts",
-    "link": "",
-    "github": "https://github.com/mosash112/Namer-App.git",
-    "images": []
+    "name": "Karateka",
+    "description": "An educational ﬂutter android app about karate",
+    "link": "https://play.google.com/store/apps/details?id=com.mostafasaleh.karateka",
+    "github": "",
+    "images": [
+      "/imgs/flutter/karateka1.jpg",
+      "/imgs/flutter/karateka2.jpg",
+      "/imgs/flutter/karateka3.jpg"
+    ]
   }
 ]

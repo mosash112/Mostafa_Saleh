@@ -85,9 +85,9 @@ export function Navbar() {
                                         className={""} />
                                 </li>
                                 <li className="row-span-3">
-                                    <ListItem href="/work/backend"
-                                        title=""
-                                        description="Work in progress..."
+                                    <ListItem href="/work/flutter"
+                                        title="Flutter"
+                                        description="apps built using Flutter."
                                         className={""} />
                                 </li>
                             </ul>
