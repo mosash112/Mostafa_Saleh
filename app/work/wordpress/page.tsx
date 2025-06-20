@@ -7,6 +7,7 @@ async function getwordpress(): Promise<ProjectType[]> {
     (project) => project.category === "wordpress"
   );
 
+  console.log(`Filtered WordPress Projects: ${filteredProjects}`);
   return filteredProjects;
 }
 

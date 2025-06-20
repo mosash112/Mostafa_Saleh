@@ -99,10 +99,8 @@ export function Navbar() {
                     href="/work/flutter"
                     title="Flutter"
                     description="apps built using Flutter."
-                    className={""}
+                    className="mb-2"
                   />
-                </li>
-                <li className="row-span-3">
                   <ListItem
                     href="/work/wordpress"
                     title="WordPress"
