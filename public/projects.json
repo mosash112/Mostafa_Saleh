@@ -64,5 +64,24 @@
       "/imgs/flutter/karateka2.jpg",
       "/imgs/flutter/karateka3.jpg"
     ]
+  },
+  {
+    "category": "wordpress",
+    "name": "Habibi resturant website",
+    "description": "An Egyptian resturant website in Poland",
+    "link": "https://habibi-egyptischespecialiteiten.nl/",
+    "github": "",
+    "images": [
+      "/imgs/wordpress/LandingPage1.png",
+      "/imgs/wordpress/LandingPage2.png",
+      "/imgs/wordpress/LandingPage3.png",
+      "/imgs/wordpress/LandingPage4.png",
+      "/imgs/wordpress/Menu1.png",
+      "/imgs/wordpress/Menu2.png",
+      "/imgs/wordpress/Menu3.png",
+      "/imgs/wordpress/Reservation.png",
+      "/imgs/wordpress/About.png",
+      "/imgs/wordpress/Footer.png"
+    ]
   }
 ]
