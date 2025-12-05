@@ -10,7 +10,8 @@
       "/imgs/mern/booking2.png",
       "/imgs/mern/booking3.png",
       "/imgs/mern/booking4.png"
-    ]
+    ],
+    "visibility": true
   },
   {
     "category": "mern",
@@ -22,7 +23,8 @@
       "/imgs/mern/supervision1.png",
       "/imgs/mern/supervision2.png",
       "/imgs/mern/supervision3.png"
-    ]
+    ],
+    "visibility": true
   },
   {
     "category": "react",
@@ -35,7 +37,8 @@
       "/imgs/frontend/e-commerce2.png",
       "/imgs/frontend/e-commerce3.png",
       "/imgs/frontend/e-commerce4.png"
-    ]
+    ],
+    "visibility": false
   },
   {
     "category": "nodejs",
@@ -43,7 +46,8 @@
     "description": "A Node.js e-commerce api",
     "link": "",
     "github": "https://github.com/mosash112/my-api",
-    "images": []
+    "images": [],
+    "visibility": true
   },
   {
     "category": ".net",
@@ -51,7 +55,8 @@
     "description": "A .Net back-end api for reviewing Pokémon",
     "link": "",
     "github": "https://github.com/mosash112/PokemonReviewerApp.git",
-    "images": []
+    "images": [],
+    "visibility": true
   },
   {
     "category": "flutter",
@@ -63,7 +68,8 @@
       "/imgs/flutter/karateka1.jpg",
       "/imgs/flutter/karateka2.jpg",
       "/imgs/flutter/karateka3.jpg"
-    ]
+    ],
+    "visibility": true
   },
   {
     "category": "wordpress",
@@ -82,6 +88,7 @@
       "/imgs/wordpress/Reservation.png",
       "/imgs/wordpress/About.png",
       "/imgs/wordpress/Footer.png"
-    ]
+    ],
+    "visibility": false
   }
 ]

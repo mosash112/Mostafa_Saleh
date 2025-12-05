@@ -1,43 +1,64 @@
 import { Project, ProjectType } from "@/components/Project";
 
 async function getnodejs(): Promise<ProjectType[]> {
-    const response = await fetch(process.env.BASE_URL + '/projects.json');
-    const projects: ProjectType[] = await response.json();
-    const filteredProjects = projects.filter(project => project.category === 'nodejs');
+  const response = await fetch(
+    process.env.NEXT_PUBLIC_BASE_URL + "/projects.json"
+  );
+  const projects: ProjectType[] = await response.json();
+  const filteredProjects = projects.filter(
+    (project) => project.category === "nodejs" && project.visibility === true
+  );
 
-    return filteredProjects;
+  return filteredProjects;
 }
 
 async function getdotnet(): Promise<ProjectType[]> {
-    const response = await fetch(process.env.BASE_URL + '/projects.json');
-    const projects: ProjectType[] = await response.json();
-    const filteredProjects = projects.filter(project => project.category === '.net');
+  const response = await fetch(
+    process.env.NEXT_PUBLIC_BASE_URL + "/projects.json"
+  );
+  const projects: ProjectType[] = await response.json();
+  const filteredProjects = projects.filter(
+    (project) => project.category === ".net" && project.visibility === true
+  );
 
-    return filteredProjects;
+  return filteredProjects;
 }
 
 async function Backend() {
-    const nodeJsProjects = await getnodejs();
-    const detNetProjects = await getdotnet();
-    return (
-        <div className="flex flex-col flex-1 m-4 lg:m-12 lg:h-fit h-full">
-            <h1 className="pb-3 font-bold text-2xl">Back End Projects</h1>
-            <div className="border border-secondary rounded-lg mb-3">
-                <h2 className="m-3 font-semibold text-lg">Node JS</h2>
-                <p className="ms-3 mb-3">Backend apis built using node js with express js, SQL and no-SQL databases.</p>
-                {nodeJsProjects?.map((project: ProjectType, index: number) => (
-                    <Project key={index} {...project} />
-                ))}
-            </div>
-            <div className="border border-secondary rounded-lg mb-3">
-                <h2 className="m-3 font-semibold text-lg">.Net</h2>
-                <p className="ms-3 mb-3">Backend apis built using .net SQL databases.</p>
-                {detNetProjects?.map((project: ProjectType, index: number) => (
-                    <Project key={index} {...project} />
-                ))}
-            </div>
-        </div>
-    );
+  const nodeJsProjects = await getnodejs();
+  const dotNetProjects = await getdotnet();
+  return (
+    <div className="flex flex-col flex-1 m-4 lg:m-12 lg:h-fit h-full">
+      <h1 className="pb-3 font-bold text-2xl">Back End Projects</h1>
+      <div className="border border-secondary rounded-lg mb-3">
+        <h2 className="m-3 font-semibold text-lg">Node JS</h2>
+        <p className="ms-3 mb-3">
+          Backend apis built using node js with express js, SQL and no-SQL
+          databases.
+        </p>
+        {nodeJsProjects.length === 0 ? (
+          <p className="ms-3 mb-3">No projects to display.</p>
+        ) : (
+          nodeJsProjects?.map((project: ProjectType, index: number) => (
+            <Project key={index} {...project} />
+          ))
+        )}
+      </div>
+      <div className="border border-secondary rounded-lg mb-3">
+        <h2 className="m-3 font-semibold text-lg">.Net</h2>
+        <p className="ms-3 mb-3">
+          Backend apis built using .net SQL databases.
+        </p>
+        {dotNetProjects.length === 0 ? (
+          <p className="ms-3 mb-3">No projects to display.</p>
+        ) : (
+          dotNetProjects?.map((project: ProjectType, index: number) => (
+            <Project key={index} {...project} />
+          ))
+        )}
+      </div>
+    </div>
+  );
 }
 
 export default Backend;
