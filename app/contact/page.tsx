@@ -36,33 +36,33 @@ export default function Contact() {
           </div>
 
           <div className="grid gap-6">
-            <div className="glass-card p-6 rounded-2xl flex items-center gap-6 hover:scale-[1.02] transition-transform">
-              <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center text-primary-foreground shadow-lg shadow-primary/30">
-                <Phone className="w-7 h-7" />
+            <div className="glass-card p-4 md:p-6 rounded-2xl flex items-center gap-4 md:gap-6 hover:scale-[1.02] transition-transform">
+              <div className="w-12 h-12 md:w-14 md:h-14 bg-primary rounded-xl flex items-center justify-center text-primary-foreground shadow-lg shadow-primary/30 shrink-0">
+                <Phone className="w-6 h-6 md:w-7 md:h-7" />
               </div>
               <div>
-                <p className="text-sm font-bold uppercase tracking-widest text-primary mb-1">Call Me</p>
-                <p className="text-xl font-medium">+20 100 051 8165</p>
+                <p className="text-[10px] md:text-sm font-bold uppercase tracking-widest text-primary mb-1">Call Me</p>
+                <p className="text-lg md:text-xl font-medium">+20 100 051 8165</p>
               </div>
             </div>
 
-            <div className="glass-card p-6 rounded-2xl flex items-center gap-6 hover:scale-[1.02] transition-transform">
-              <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center text-primary-foreground shadow-lg shadow-primary/30">
-                <Mail className="w-7 h-7" />
+            <div className="glass-card p-4 md:p-6 rounded-2xl flex items-center gap-4 md:gap-6 hover:scale-[1.02] transition-transform">
+              <div className="w-12 h-12 md:w-14 md:h-14 bg-primary rounded-xl flex items-center justify-center text-primary-foreground shadow-lg shadow-primary/30 shrink-0">
+                <Mail className="w-6 h-6 md:w-7 md:h-7" />
               </div>
               <div>
-                <p className="text-sm font-bold uppercase tracking-widest text-primary mb-1">Email Me</p>
-                <p className="text-xl font-medium">mashalex2000@gmail.com</p>
+                <p className="text-[10px] md:text-sm font-bold uppercase tracking-widest text-primary mb-1">Email Me</p>
+                <p className="text-lg md:text-xl font-medium break-all">mashalex2000@gmail.com</p>
               </div>
             </div>
 
-            <div className="glass-card p-6 rounded-2xl flex items-center gap-6 hover:scale-[1.02] transition-transform">
-              <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center text-primary-foreground shadow-lg shadow-primary/30">
-                <MapPin className="w-7 h-7" />
+            <div className="glass-card p-4 md:p-6 rounded-2xl flex items-center gap-4 md:gap-6 hover:scale-[1.02] transition-transform">
+              <div className="w-12 h-12 md:w-14 md:h-14 bg-primary rounded-xl flex items-center justify-center text-primary-foreground shadow-lg shadow-primary/30 shrink-0">
+                <MapPin className="w-6 h-6 md:w-7 md:h-7" />
               </div>
               <div>
-                <p className="text-sm font-bold uppercase tracking-widest text-primary mb-1">Location</p>
-                <p className="text-xl font-medium">Alexandria, Egypt</p>
+                <p className="text-[10px] md:text-sm font-bold uppercase tracking-widest text-primary mb-1">Location</p>
+                <p className="text-lg md:text-xl font-medium">Alexandria, Egypt</p>
               </div>
             </div>
           </div>
