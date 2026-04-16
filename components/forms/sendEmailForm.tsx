@@ -27,7 +27,8 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "@/components/ui/dialog"
-import { useRef } from "react"
+import { useRef, useState } from "react"
+import { Loader2 } from "lucide-react"
 
 
 export type FormDataType = {
@@ -68,9 +69,19 @@ function SendEmailForm() {
             content: "",
         },
     })
+    const [isSending, setIsSending] = useState(false);
+    const [dialogOpen, setDialogOpen] = useState(false);
+    const [result, setResult] = useState({ success: false, message: "" });
 
-    const onSubmit = (data: z.infer<typeof formSchema>) => {
-        sendEmail(data.name, data.email, data.subject, data.content);
+    const onSubmit = async (data: z.infer<typeof formSchema>) => {
+        setIsSending(true);
+        const res = await sendEmail(data.name, data.email, data.subject, data.content);
+        setResult(res || { success: false, message: "Something went wrong. Please try again." });
+        setIsSending(false);
+        setDialogOpen(true);
+        if (res?.success) {
+            form.reset();
+        }
     }
 
 
@@ -146,24 +157,35 @@ function SendEmailForm() {
                             </FormItem>
                         )}
                     />
-                    <Dialog >
-                        <DialogTrigger asChild>
-                            <Button type="submit">Submit</Button>
-                        </DialogTrigger>
-                        <DialogContent className="bg-foreground">
-                            <DialogHeader>
-                                <DialogTitle className="text-primary">Thank you for sending an email</DialogTitle>
-                                <DialogDescription className="text-secondary">
-                                    Now the email that you just sent will find me shortly and you will hear from me soon.
-                                </DialogDescription>
-                            </DialogHeader>
-                            <DialogFooter className="sm:justify-start">
-                                <DialogClose asChild>
-                                    <Button type="button" variant="destructive">
-                                        Close
-                                    </Button>
-                                </DialogClose>
-                            </DialogFooter>
+                    <Button type="submit" disabled={isSending}>
+                        {isSending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                        {isSending ? "Sending..." : "Submit"}
+                    </Button>
+
+                    <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
+                        <DialogContent className="glass-card border-2 border-border/50 shadow-2xl overflow-hidden p-0">
+                            <div className={`h-2 w-full ${result.success ? 'bg-primary' : 'bg-destructive'}`} />
+                            <div className="p-8">
+                                <DialogHeader>
+                                    <DialogTitle className={`text-2xl font-outfit font-bold ${result.success ? 'text-primary' : 'text-destructive'}`}>
+                                        {result.success ? "Message Sent!" : "Oops! Something went wrong"}
+                                    </DialogTitle>
+                                    <DialogDescription className="text-foreground/80 text-lg mt-4 !leading-relaxed">
+                                        {result.message}
+                                    </DialogDescription>
+                                </DialogHeader>
+                                <DialogFooter className="mt-8">
+                                    <DialogClose asChild>
+                                        <Button 
+                                            type="button" 
+                                            variant={result.success ? "default" : "destructive"}
+                                            className="px-8"
+                                        >
+                                            Close
+                                        </Button>
+                                    </DialogClose>
+                                </DialogFooter>
+                            </div>
                         </DialogContent>
                     </Dialog>
                 </form>
