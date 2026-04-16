@@ -1,10 +1,12 @@
 import { Project, ProjectType } from "@/components/Project";
 
+import fs from "fs";
+import path from "path";
+
 async function getflutter(): Promise<ProjectType[]> {
-  const response = await fetch(
-    process.env.NEXT_PUBLIC_BASE_URL + "/projects.json"
-  );
-  const projects: ProjectType[] = await response.json();
+  const filePath = path.join(process.cwd(), "public", "projects.json");
+  const fileData = fs.readFileSync(filePath, "utf-8");
+  const projects: ProjectType[] = JSON.parse(fileData);
   const filteredProjects = projects.filter(
     (project) => project.category === "flutter" && project.visibility === true
   );
