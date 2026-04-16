@@ -84,7 +84,7 @@ export function Project({
                 {images?.map((img, i) => (
                   <CarouselItem key={i} className="flex justify-center items-center w-full">
                     <Image
-                      src={process.env.NEXT_PUBLIC_BASE_URL + img}
+                      src={img}
                       alt="full screen image"
                       className="rounded-lg object-contain w-full h-auto max-h-[85vh]"
                       width={1200}
@@ -136,7 +136,7 @@ export function Project({
                     className="md:basis-1/2 sm:basis-1 pl-2 "
                   >
                     <Image
-                      src={process.env.NEXT_PUBLIC_BASE_URL + images[index]}
+                      src={images[index]}
                       alt="project images"
                       className="rounded-lg cursor-pointer hover:opacity-80 transition-opacity w-full h-auto max-h-[280px] object-contain"
                       onClick={() => {

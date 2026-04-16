@@ -29,7 +29,7 @@ export default function Home() {
         <p className="mb-4 font-bold animate-fade-up text-primary uppercase tracking-widest text-sm">Want to hire me?</p>
         <div className="flex flex-col sm:flex-row gap-4 animate-fade-up">
           <a
-            href={process.env.NEXT_PUBLIC_BASE_URL + "/Mostafa Ahmed Saleh - feb2026.pdf"}
+            href="/Mostafa Ahmed Saleh - feb2026.pdf"
             download="Mostafa Ahmed Saleh - feb2026.pdf"
             className="w-full sm:w-auto"
           >
@@ -79,7 +79,7 @@ export default function Home() {
         <div className="relative animate-float">
           <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full -z-10 animate-pulse" />
           <Image
-            src={process.env.NEXT_PUBLIC_BASE_URL + "/imgs/home-3.png"}
+            src="/imgs/home-3.png"
             alt="Mostafa Saleh"
             width={500}
             height={500}
