@@ -1,31 +1,70 @@
 import SendEmailForm from "@/components/forms/sendEmailForm";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Mail, Phone, MapPin } from "lucide-react";
 
-
-export default function contact() {
-
-    return (
-        <div className="flex flex-col md:flex-row m-4 p-4 lg:m-12 w-10/12 items-center justify-evenly gap-10">
-            <div className="flex-1 w-full">
-                <Card className="border-foreground rounded-2xl ">
-                    <CardHeader>
-                        <CardTitle>Contact by email</CardTitle>
-                        <CardDescription className="text-secondary">send me an email</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                        <SendEmailForm />
-                    </CardContent>
-                </Card>
-            </div>
-            <div className="flex-1 w-full bg-secondary text-background rounded-xl p-3">
-                <h1 className="font-semibold text-xl mb-3">Contact directly</h1>
-                <div className="grid md:grid-cols-[0.2fr_1fr] gap-3 ">
-                    <h2>Phone: </h2>
-                    <h2>+201000518165</h2>
-                    <h2>Email: </h2>
-                    <h2 className="text-sm md:text-md">mashalex2000@gmail.com <br /> mostafasaleh11200@gmail.com</h2>
-                </div>
-            </div>
+export default function Contact() {
+  return (
+    <div className="flex-1 flex flex-col items-center justify-center p-6 lg:p-12 animate-fade-up">
+      <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        
+        {/* Left Column: Form */}
+        <div className="w-full order-2 lg:order-1">
+          <Card className="glass-card rounded-3xl overflow-hidden border-none shadow-2xl">
+            <CardHeader className="bg-primary/10 pb-8 text-center lg:text-left">
+              <CardTitle className="text-3xl font-outfit font-bold">Get in Touch</CardTitle>
+              <CardDescription className="text-foreground/70 text-lg">
+                Have a project in mind? Send me a message and I&apos;ll get back to you within 24 hours.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="pt-8 px-2 lg:px-6">
+              <SendEmailForm />
+            </CardContent>
+          </Card>
         </div>
-    );
+
+        {/* Right Column: Direct Info */}
+        <div className="flex flex-col gap-8 order-1 lg:order-2 lg:pt-10">
+          <div className="space-y-2 text-center lg:text-left">
+            <h1 className="text-5xl font-outfit font-extrabold tracking-tight">Let&apos;s build something <span className="text-primary italic">extraordinary</span> together.</h1>
+            <p className="text-xl text-foreground/60 leading-relaxed">
+              I&apos;m always open to discussing new projects, creative ideas or opportunities to be part of your visions.
+            </p>
+          </div>
+
+          <div className="grid gap-6">
+            <div className="glass-card p-6 rounded-2xl flex items-center gap-6 hover:scale-[1.02] transition-transform">
+              <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center text-primary-foreground shadow-lg shadow-primary/30">
+                <Phone className="w-7 h-7" />
+              </div>
+              <div>
+                <p className="text-sm font-bold uppercase tracking-widest text-primary mb-1">Call Me</p>
+                <p className="text-xl font-medium">+20 100 051 8165</p>
+              </div>
+            </div>
+
+            <div className="glass-card p-6 rounded-2xl flex items-center gap-6 hover:scale-[1.02] transition-transform">
+              <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center text-primary-foreground shadow-lg shadow-primary/30">
+                <Mail className="w-7 h-7" />
+              </div>
+              <div>
+                <p className="text-sm font-bold uppercase tracking-widest text-primary mb-1">Email Me</p>
+                <p className="text-xl font-medium">mashalex2000@gmail.com</p>
+              </div>
+            </div>
+
+            <div className="glass-card p-6 rounded-2xl flex items-center gap-6 hover:scale-[1.02] transition-transform">
+              <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center text-primary-foreground shadow-lg shadow-primary/30">
+                <MapPin className="w-7 h-7" />
+              </div>
+              <div>
+                <p className="text-sm font-bold uppercase tracking-widest text-primary mb-1">Location</p>
+                <p className="text-xl font-medium">Alexandria, Egypt</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  );
 }

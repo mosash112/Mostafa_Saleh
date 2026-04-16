@@ -1,28 +1,76 @@
 [
   {
-    "category": "mern",
-    "name": "My booking.com website",
-    "description": "A Full Stack MERN hotel booking website",
-    "link": "https://my-booking-app-6z8n.onrender.com/",
-    "github": "https://github.com/mosash112/Booking-app",
+    "category": "full-stack",
+    "name": "Miim - Handmade E-Commerce Platform",
+    "description": "Developed a specialized marketplace for handmade products, focusing on performance and SEO through SSR.",
+    "stack": ["Next.js", "NestJS", "TypeScript"],
+    "link": "",
+    "github": "",
     "images": [
-      "/imgs/mern/booking1.png",
-      "/imgs/mern/booking2.png",
-      "/imgs/mern/booking3.png",
-      "/imgs/mern/booking4.png"
+      "/imgs/full-stack/miim/hero_section.png",
+      "/imgs/full-stack/miim/what_we_do.png",
+      "/imgs/full-stack/miim/store_page.png",
+      "/imgs/full-stack/miim/get_in_touch.png"
     ],
     "visibility": true
   },
   {
-    "category": "mern",
-    "name": "Supervision test website",
-    "description": "A Full Stack (vite+node js) Pilgrimage Supervision test website",
+    "category": "full-stack",
+    "name": "Educational Platform (LMS)",
+    "description": "Architected a hybrid Learning Management System for preparatory and secondary students.",
+    "stack": [".NET Web API", "React", "Vite"],
+    "link": "",
+    "github": "",
+    "images": [
+      "/imgs/full-stack/lms/01_landing_loading.png",
+      "/imgs/full-stack/lms/02_landing_hero.png",
+      "/imgs/full-stack/lms/03_landing_about.png",
+      "/imgs/full-stack/lms/04_landing_contact.png",
+      "/imgs/full-stack/lms/05_auth_login.png",
+      "/imgs/full-stack/lms/06_teacher_dashboard.png",
+      "/imgs/full-stack/lms/07_teacher_groups.png",
+      "/imgs/full-stack/lms/08_teacher_lectures.png",
+      "/imgs/full-stack/lms/09_teacher_assignments.png",
+      "/imgs/full-stack/lms/10_teacher_access_management.png",
+      "/imgs/full-stack/lms/11_teacher_profile.png",
+      "/imgs/full-stack/lms/12_student_dashboard.png",
+      "/imgs/full-stack/lms/13_student_courses.png",
+      "/imgs/full-stack/lms/14_student_homework.png",
+      "/imgs/full-stack/lms/15_student_reports.png",
+      "/imgs/full-stack/lms/16_student_exams.png",
+      "/imgs/full-stack/lms/17_student_profile.png"
+    ],
+    "visibility": true
+  },
+  {
+    "category": "full-stack",
+    "name": "Supervision Assessment Tool",
+    "description": "Created a digital testing interface for HIJ supervisors, replacing manual paper-based testing with automated scoring.",
+    "stack": ["Node.js", "React", "Vite"],
     "link": "https://supervision-test.onrender.com",
     "github": "",
     "images": [
-      "/imgs/mern/supervision1.png",
-      "/imgs/mern/supervision2.png",
-      "/imgs/mern/supervision3.png"
+      "/imgs/full-stack/supervision/login_v2.png",
+      "/imgs/full-stack/supervision/question_1_unanswered.png",
+      "/imgs/full-stack/supervision/question_1_answered.png",
+      "/imgs/full-stack/supervision/question_15_answered.png",
+      "/imgs/full-stack/supervision/exam_confirmation_v2.png",
+      "/imgs/full-stack/supervision/exam_result_v2.png"
+    ],
+    "visibility": true
+  },
+  {
+    "category": "full-stack",
+    "name": "My booking.com website",
+    "description": "A Full Stack MERN hotel booking website",
+    "stack": ["React", "Express", "Node.js", "MongoDB"],
+    "link": "",
+    "github": "https://github.com/mosash112/Booking-app",
+    "images": [
+      "/imgs/full-stack/booking/1.png",
+      "/imgs/full-stack/booking/2.png",
+      "/imgs/full-stack/booking/3.png",
+      "/imgs/full-stack/booking/4.png"
     ],
     "visibility": true
   },
@@ -30,6 +78,7 @@
     "category": "react",
     "name": "My E-Commerce website",
     "description": "A React front-end e-commerce website",
+    "stack": ["React", "CSS", "Vite"],
     "link": "https://my-ecommerce-xn89.onrender.com",
     "github": "https://github.com/mosash112/E-Commerance.git",
     "images": [
@@ -44,6 +93,7 @@
     "category": "nodejs",
     "name": "My Store api",
     "description": "A Node.js e-commerce api",
+    "stack": ["Node.js", "Express", "MongoDB"],
     "link": "",
     "github": "https://github.com/mosash112/my-api",
     "images": [],
@@ -53,6 +103,7 @@
     "category": ".net",
     "name": "Pokemon Review Api",
     "description": "A .Net back-end api for reviewing Pokémon",
+    "stack": [".NET", "C#", "SQL Server"],
     "link": "",
     "github": "https://github.com/mosash112/PokemonReviewerApp.git",
     "images": [],
@@ -62,6 +113,7 @@
     "category": "flutter",
     "name": "Karateka",
     "description": "An educational ﬂutter android app about karate",
+    "stack": ["Flutter", "Dart", "Android"],
     "link": "https://play.google.com/store/apps/details?id=com.mostafasaleh.karateka",
     "github": "",
     "images": [
@@ -72,9 +124,27 @@
     "visibility": true
   },
   {
+    "category": "flutter",
+    "name": "MyWerd",
+    "description": "An Android application designed for a daily Quran werd (reading schedule). It unlocks 2 pages per day and allows users to set custom Khatema start/end points and Ramadan dates. (Work in Progress)",
+    "stack": ["Flutter", "Dart", "Android"],
+    "link": "",
+    "github": "",
+    "images": [
+      "/imgs/flutter/MyWerd/control_panel.jpeg",
+      "/imgs/flutter/MyWerd/ramadan_settings.jpeg",
+      "/imgs/flutter/MyWerd/reading_view.jpeg",
+      "/imgs/flutter/MyWerd/daily_program.jpeg",
+      "/imgs/flutter/MyWerd/splash_screen.jpeg",
+      "/imgs/flutter/MyWerd/document_viewer.jpeg"
+    ],
+    "visibility": true
+  },
+  {
     "category": "wordpress",
     "name": "Habibi resturant website",
     "description": "An Egyptian resturant website in Poland",
+    "stack": ["WordPress", "Elementor"],
     "link": "https://habibi-egyptischespecialiteiten.nl/",
     "github": "",
     "images": [

@@ -4,60 +4,68 @@
 
 @layer base {
   :root {
-    --background: #EEEEEE;
-    --foreground: #222831;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
 
-    /* --card: #EEEEEE;
-    --card-foreground: #222831; */
+    --card: 0 0% 98%;
+    --card-foreground: 222.2 84% 4.9%;
 
-    /* --navbar: #00ADB5;
-    --navbar-foreground: #EEEEEE; */
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: #89cff0;
-    --primary-foreground: #EEEEEE;
+    --primary: 199 89% 48%;
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: #393E46;
-    --secondary-foreground: #EEEEEE;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
 
-    /* --accent: #202f7e;
-    --accent-foreground: #fff;*/
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-    --muted: #9c9fa3;
-    --muted-foreground: #000;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 199 89% 48%;
 
-    --radius: 0.5rem;
-    --trans: #ffffff00;
+    --radius: 1rem;
+    --trans: 0 0% 100% / 0%;
+
+    /* Glass Effect variables */
+    --glass-bg: 0 0% 100% / 70%;
+    --glass-border: 0 0% 0% / 10%;
   }
 
   .dark {
-    --background: #222831;
-    --foreground: #EEEEEE;
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
 
-    /* --card: #EEEEEE;
-    --card-foreground: #222831;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
 
-    --navbar: #99c4ff;
-    --navbar-foreground: #001839; */
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: #89cff0;
-    --primary-foreground: #EEEEEE;
+    --primary: 199 89% 68%;
+    --primary-foreground: 222.2 84% 4.9%;
 
-    --secondary: #EEEEEE;
-    --secondary-foreground: #393E46;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
 
-    /* --accent: #804a00;
-    --accent-foreground: #EEEEEE; */
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
 
-    --muted: #9c9fa3;
-    --muted-foreground: #222831;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --ring: 199 89% 68%;
+
+    /* Glass Effect variables */
+    --glass-bg: 0 0% 12% / 80%;
+    --glass-border: 0 0% 100% / 20%;
   }
 }
 
@@ -67,6 +75,31 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+  }
+
+  ::selection {
+    background-color: hsl(var(--primary) / 0.3);
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-[hsla(var(--glass-bg))] backdrop-blur-xl border border-[hsla(var(--glass-border))] shadow-xl;
+  }
+
+  .premium-gradient {
+    background: radial-gradient(circle at top right, hsl(var(--primary) / 0.15), transparent 40%),
+                radial-gradient(circle at bottom left, hsl(var(--primary) / 0.1), transparent 40%);
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
   }
 }

@@ -8,7 +8,7 @@ import {
 import * as React from "react"
 import Autoplay from "embla-carousel-autoplay"
 
-const titles = ["Software Engineer", "MERN Stack Developer", "Flutter Android Developer", "Desktop Developer"];
+const titles = ["Software Engineer", "Full Stack Developer", "Flutter Android Developer", "Desktop Developer"];
 
 function TitleRotator() {
     const plugin = React.useRef(

@@ -16,7 +16,7 @@ function ListItem({ className, title, description, href }: Props) {
                 <Link
                     href={href}
                     className={cn(
-                        "block select-none space-y-1 p-3 leading-none no-underline outline-none transition-colors bg-trans text-accent border-2 border-navbar rounded-md hover:bg-primary hover:text-background hover:border-trans",
+                        "block select-none space-y-1 p-3 leading-none no-underline outline-none transition-colors bg-trans text-foreground border-2 border-navbar rounded-md hover:bg-primary hover:text-background hover:border-trans",
                         className!
                     )}
                 >
