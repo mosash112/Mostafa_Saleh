@@ -25,9 +25,13 @@ export default function Contact() {
         {/* Right Column: Direct Info */}
         <div className="flex flex-col gap-8 order-1 lg:order-2 lg:pt-10">
           <div className="space-y-2 text-center lg:text-left">
-            <h1 className="text-5xl font-outfit font-extrabold tracking-tight">Let&apos;s build something <span className="text-primary italic">extraordinary</span> together.</h1>
+            <h1 className="text-5xl font-outfit font-extrabold tracking-tight pb-3">
+              {"Let's build something "}
+              <span className="text-primary italic">extraordinary</span>
+              {" together."}
+            </h1>
             <p className="text-xl text-foreground/60 leading-relaxed">
-              I&apos;m always open to discussing new projects, creative ideas or opportunities to be part of your visions.
+              {"I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions."}
             </p>
           </div>
 

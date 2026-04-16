@@ -16,7 +16,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
   return (
     <html lang="en">
       <body className={`${inter.variable} ${outfit.variable} font-inter`}>
-        <main className="min-h-dvh w-full bg-background flex flex-col premium-gradient">
+        <main className="min-h-dvh w-full bg-background flex flex-col premium-gradient overflow-x-hidden">
           <Navbar />
           {children}
         </main>

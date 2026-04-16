@@ -11,7 +11,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="mx-4 lg:mx-12 flex flex-col flex-1 lg:flex-row items-center justify-center gap-10">
+    <div className="px-6 lg:px-12 flex flex-col flex-1 lg:flex-row items-center justify-center gap-10 max-w-full overflow-x-hidden">
       <div className="flex flex-col flex-1 justify-center my-5 max-w-2xl">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 animate-fade-down font-outfit tracking-tight leading-tight">
           {"Hi, I'm Mostafa Saleh"}
