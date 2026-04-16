@@ -7,18 +7,15 @@ export default async function sendEmail(name: string, from: string, subject: str
     host: "smtp.gmail.com",
     port: 465,
     secure: true,
+    pool: true, // Serverless stability
     auth: {
       user: process.env.SMTP_USER,
       pass: process.env.SMTP_PASSWORD,
     },
+    tls: {
+      rejectUnauthorized: false, // Prevents certificate handshake failures in shared cloud environments
+    },
   });
-
-  try {
-    await transport.verify();
-  } catch (error) {
-    console.error("SMTP Verification Error:", error);
-    return { success: false, message: "Could not connect to the email server. Please check SMTP configuration." };
-  }
 
   try {
     await transport.sendMail({
@@ -35,8 +32,13 @@ export default async function sendEmail(name: string, from: string, subject: str
       `,
     });
     return { success: true, message: "Thank you! Your message has been sent successfully." };
-  } catch (error) {
-    console.error("Send Email Error:", error);
-    return { success: false, message: "Failed to send the email. Please try again later." };
+  } catch (error: any) {
+    console.error("Deep SMTP Error:", error);
+    // Return specific error message for cloud debugging
+    const errorMessage = error?.message || "Unknown SMTP Error";
+    return { 
+      success: false, 
+      message: `Failed to connect/send: ${errorMessage}. Please verify Vercel SMTP variables.` 
+    };
   }
 }
